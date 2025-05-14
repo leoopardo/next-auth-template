@@ -1,5 +1,16 @@
 ## Template de projeto em Next.js com rotas publicas e autenticadas
 
+Esse é um template para otimizar a criação de novos projetos
+que terão os seguintes requisitos técnicos:
+ 
+ - Possui área pública (Tela institucional, login, cadastro, etc)
+ - Possui área logada  (Dashboards, tabelas de controle de dados, etc)
+ - Usuário logado ainda pode ver algumas telas públicas (Tela institucional, etc)
+ - Usuário logado não pode ver algumas telas públicas (login, cadastro, etc)
+ - Usuário não logado não pode ver telas privadas (Dashboards, tabelas de controle de dados, etc)
+
+#### Este é somente um template, não edite, diretamente e não utilize como produto final
+#### Você *deve* criar um repositório usando esse templete e adapta-lo à suas regras de negócio
 
 ## 📁 Estrutura de Pastas
 
