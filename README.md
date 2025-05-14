@@ -6,45 +6,54 @@
 ```bash
 my-next-project/
 │
-├── public/                 # Arquivos públicos (imagens, favicon, etc.)
+├── public/                        # Arquivos públicos (imagens, favicon, etc.)
 │
-├── src/                    # Código-fonte principal
-│   ├── app/                # Estrutura de rotas do Next.js (App Router)
-│   │   ├── (private)/       # Pasta estrutural que engloba rotas autenticadas
-|   |   |   ├── auth/         # Pasta/rota que engloba rotas autenticadas
-|   |   |   |   ├── (home)/    # Pasta estrutural para a home das rotas autenticadas
-|   |   |   |   |   ├── Page.tsx   # Arquivo da tela home
-|   |   |   |   ├── users/     # Pasta/rota de uma tela de usuários (opcional)
-|   |   |   |   |   ├── Page.tsx   # Arquivo da tela de usuários (opcional)
-|   |   ├── (public)/        # Pasta estrutural que engloba todas as rotas publicas
-|   |   |   ├── (landing-page)  # Pasta estrutural das telas da landing page
-|   |   |   |   ├── Page.tsx    # Arquivo para a rota "/" simbolizando a landing page
-|   |   |   ├── login/        # Pasta/rota de login
-|   |   |   |   ├── page.tsx   # Arquivo da tela de login
-|   |   |   ├── register      # Pasta/rota da tela de cadastro
-|   |   |   |   ├── page.tsx   # Arquivo da tela de cadastro
-|   ├── middleware.ts       # Middleware execudato a cada acesso, atualização, ou redirecionamento dentro do aplicativo, irá realizar lógicas de validação de autenticação e acesso à rotas públicas e privadas
-│   │   ├── layout.tsx      # Layout raiz
-
+├── src/                           # Código-fonte principal
+│   ├── app/                       # Estrutura de rotas do Next.js (App Router)
+│   |   ├── (private)/             # Pasta estrutural que engloba rotas autenticadas
+|   |   |   └── auth/              # Pasta/rota que engloba rotas autenticadas
+|   |   |       ├── (home)/        # Pasta estrutural para a home das rotas autenticadas
+|   |   |       |   └── Page.tsx   # Arquivo da tela home
+|   |   |       └── users/         # Pasta/rota de uma tela de usuários (opcional)
+|   |   |           └── Page.tsx   # Arquivo da tela de usuários (opcional)
+|   |   ├── (public)/              # Pasta estrutural que engloba todas as rotas publicas
+|   |   |   ├── (landing-page)     # Pasta estrutural das telas da landing page
+|   |   |   |   └── Page.tsx       # Arquivo para a rota "/" simbolizando a landing page
+|   |   |   ├── login/             # Pasta/rota de login
+|   |   |   |   └── page.tsx       # Arquivo da tela de login
+|   |   |   └── register           # Pasta/rota da tela de cadastro
+|   |   |       └── page.tsx       # Arquivo da tela de cadastro
+│   |   └── layout.tsx             # Layout raiz
+|   |
+|   └── middleware.ts              # Middleware execudato a cada acesso, atualização, ou redirecionamento dentro do aplicativo, irá realizar lógicas de validação de autenticação e acesso à rotas públicas e 
+|
+|
 ** outras estruturas recomendadas
 │   │
-│   ├── components/         # Componentes reutilizáveis
-│   │   └── Button.tsx      # Exemplo de componente
+│   ├── services/                  # Chamadas de API RESTful
+│   │   ├── auth/                  # Chamadas de API referentes a autenticação
+|   |   |   └── useLogin.tsx       # Rota de Login
+|   |   |   └── useRefresh.tsx     # Rota de refresh token
+|   |   |   ...
+|   |   └── ...
+|   |
+│   ├── components/                # Componentes reutilizáveis
+│   │   └── Button.tsx             # Exemplo de componente
 │   │
-│   ├── features/           # Funcionalidades organizadas por domínio
-│   │   └── auth/           # Ex: login, registro, autenticação
+│   ├── features/                  # Funcionalidades organizadas por domínio
+│   │   └── auth/                  # Ex: login, registro, autenticação
 │   │
-│   ├── lib/                # Funções utilitárias e bibliotecas
-│   │   └── api.ts          # Exemplo: cliente fetch/Axios
+│   ├── lib/                       # Funções utilitárias e bibliotecas
+│   │   └── api.ts                 # Exemplo: cliente fetch/Axios
 │   │
-│   ├── styles/             # Arquivos de estilo (CSS/Tailwind/etc)
-│   │   └── globals.css     # Estilo global
+│   ├── styles/                    # Arquivos de estilo (CSS/Tailwind/etc)
+│   │   └── globals.css            # Estilo global
 │   │
-│   ├── types/              # Tipagens TypeScript globais
-│   │   └── index.d.ts      # Definições de tipos
+│   ├── types/                     # Tipagens TypeScript globais
+│   │   └── index.d.ts             # Definições de tipos
 │   │
-│   └── hooks/              # React hooks personalizados
-│       └── useUser.ts      # Exemplo de hook
+│   └── hooks/                     # React hooks personalizados
+│       └── useUser.ts             # Exemplo de hook
 **
 │
 ├── .env                    # Variáveis de ambiente
